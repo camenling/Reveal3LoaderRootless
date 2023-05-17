@@ -1,23 +1,17 @@
-export THEOS_PACKAGE_DIR_NAME=./releases/debs
-export TARGET=:clang:latest:5.1
-export ARCHS=armv7 armv7s arm64
-export ADDITIONAL_CFLAGS = -Ithird-party/partialzip/include -Ithird-party/libcurl
-export SSH_ASKPASS = ./ssh-askpass
+export TARGET = iphone:latest:14.0
+export ARCHS = arm64 arm64e
 
-include theos/makefiles/common.mk
+FINALPACKAGE = 1
 
-TWEAK_NAME = RHRevealLoader
-RHRevealLoader_FILES = RHRevealLoader.mm
+include $(THEOS)/makefiles/common.mk
 
-TOOL_NAME = extrainst_
-extrainst__INSTALL_PATH = /DEBIAN
-extrainst__FILES = RHDownloadReveal.m third-party/partialzip/partial.c
-extrainst__LIBRARIES = z
-extrainst__FRAMEWORKS = Security
-extrainst__OBJ_FILES = third-party/libcurl/libcurl.a
+TWEAK_NAME = Reveal3Loader
+
+Reveal3Loader_FILES = Tweak.xm
+Reveal3Loader_CFLAGS = -fobjc-arc
+Reveal3Loader_EXTRA_FRAMEWORKS = AltList
 
 include $(THEOS_MAKE_PATH)/tweak.mk
-include $(THEOS_MAKE_PATH)/tool.mk
 
 after-install::
 	install.exec "killall -9 SpringBoard"

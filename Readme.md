@@ -1,31 +1,18 @@
-## Reveal iOS Jailbreak Tweak 
-Reveal Loader dynamically loads libReveal.dylib (Reveal.app support) into iOS apps on jailbroken devices. Configuration is via the Reveal menu in Settings.app
+# Reveal3Loader
+Tweak to use RevealApp (https://revealapp.com) to inspect iOS Apps
 
-Reveal is an OS X application that allows you to remotely introspect a running applications view hierarchy and edit various view properties. 
+Use the Preferences to select which apps you would like to load RevealServer.
 
-Generally you have to include their debugging framework in your application at build time in-order to perform debugging actions, however with this tweak installed this is no longer necessary. 
+<img width="736" alt="reveal" src="https://github.com/landonepps/Reveal3Loader/assets/1572318/f94cda5c-e66e-4204-b206-0d51d4d06ddb">
 
-For more info see [revealapp.com](http://revealapp.com)
+*Inspecting a SwiftUI app via Reveal3Loader on iOS 16.4.1 (palera1n)*
 
+### Building
 
-## How to Install
-Reveal Loader is available directly inside Cydia. Just search for the "Reveal Loader" development package.
+1. Install Theos:  
+https://theos.dev/docs/installation
 
-## How to Install - Custom
-See [here](http://www.ijailbreak.com/cydia/how-to-add-a-cydia-repository/) for how to add a Repository to Cydia.
+2. Install AltList:  
+https://github.com/opa334/AltList/tree/main#installation
 
-Navigate to 'Cydia > Sources Tab > Edit > Add' and enter the below source URL.
-
-`http://rheard.com/cydia`
-
-Finally, search for Reveal Loader on the Packages Tab and select install. 
-
-## How to Use
-Open 'Settings > Reveal > Enabled Applications' and toggle the application or applications that you want to debug to on.
-
-Launch the target application and it should appear inside Reveal.app on your Mac. 
-
-(You will likely need to quit and relaunch the target application)
-
-## Be Social
-Follow me on [Twitter](https://twitter.com/intent/follow?screen_name=heardrwt) (@heardrwt)
+3. Run `make && make package`

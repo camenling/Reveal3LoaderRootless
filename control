@@ -1,15 +1,9 @@
-Package: com.rheard.reveal-loader
-Conflicts: com.rheard.rhrevealloader
-Replaces: com.rheard.rhrevealloader
-Name: Reveal Loader
-Version: 1.0.0
+Package: com.landonepps.reveal3loader
+Name: Reveal3Loader
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist
+Version: 1.0
 Architecture: iphoneos-arm
-Depends: mobilesubstrate, preferenceloader, applist
-Maintainer: Richard Heard <cydia@rheard.com>
-Author: Richard Heard <cydia@rheard.com>
+Description: Reveal2Loader updated for Reveal 3+ and iOS 15/16.
+Maintainer: Landon Epps
+Author: Landon Epps
 Section: Tweaks
-Description: dynamically loads Reveal into applications
- RevealLoader dynamically loads libReveal.dylib (Reveal.app support) into iOS apps
- on jailbroken devices. Configuration is via the Reveal menu in Settings.app
- For more info, see http://github.com/heardrwt/RevealLoader and http://revealapp.com
-Tag: role::developer, purpose::extension
